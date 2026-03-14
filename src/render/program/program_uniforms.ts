@@ -1,12 +1,12 @@
 import {fillExtrusionUniforms, fillExtrusionPatternUniforms} from './fill_extrusion_program';
-import {fillPatternUniforms, fillOutlineUniforms, fillOutlinePatternUniforms, fillUniforms} from './fill_program';
+import {fillPatternUniforms, fillDotUniforms, fillHatchUniforms, fillOutlineUniforms, fillOutlinePatternUniforms, fillUniforms} from './fill_program';
 import {circleUniforms} from './circle_program';
 import {collisionUniforms, collisionCircleUniforms} from './collision_program';
 import {debugUniforms} from './debug_program';
 import {heatmapUniforms, heatmapTextureUniforms} from './heatmap_program';
 import {hillshadeUniforms, hillshadePrepareUniforms} from './hillshade_program';
 import {colorReliefUniforms} from './color_relief_program';
-import {lineUniforms, lineGradientUniforms, linePatternUniforms, lineSDFUniforms, lineGradientSDFUniforms} from './line_program';
+import {lineUniforms, lineHashUniforms, lineGradientUniforms, linePatternUniforms, lineSDFUniforms, lineGradientSDFUniforms} from './line_program';
 import {rasterUniforms} from './raster_program';
 import {symbolIconUniforms, symbolSDFUniforms, symbolTextAndIconUniforms} from './symbol_program';
 import {backgroundUniforms, backgroundPatternUniforms} from './background_program';
@@ -21,6 +21,8 @@ export const programUniforms = {
     fillExtrusion: fillExtrusionUniforms,
     fillExtrusionPattern: fillExtrusionPatternUniforms,
     fill: fillUniforms,
+    fillDot: fillDotUniforms,
+    fillHatch: fillHatchUniforms,
     fillPattern: fillPatternUniforms,
     fillOutline: fillOutlineUniforms,
     fillOutlinePattern: fillOutlinePatternUniforms,
@@ -36,6 +38,7 @@ export const programUniforms = {
     hillshadePrepare: hillshadePrepareUniforms,
     colorRelief: colorReliefUniforms,
     line: lineUniforms,
+    lineHash: lineHashUniforms,
     lineGradient: lineGradientUniforms,
     linePattern: linePatternUniforms,
     lineSDF: lineSDFUniforms,

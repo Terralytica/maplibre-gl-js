@@ -8,9 +8,10 @@ import rasterBoundsAttributes from '../data/raster_bounds_attributes';
 import posAttributes from '../data/pos_attributes';
 import {type ProgramConfiguration} from '../data/program_configuration';
 import {CrossTileSymbolIndex} from '../symbol/cross_tile_symbol_index';
-import {shaders} from '../shaders/shaders';
+import {shaders, type PreparedShader} from '../shaders/shaders';
 import {Program} from './program';
 import {programUniforms} from './program/program_uniforms';
+import {fillHatchUniforms} from './program/fill_program';
 import {Context} from '../gl/context';
 import {DepthMode} from '../gl/depth_mode';
 import {StencilMode} from '../gl/stencil_mode';
@@ -749,6 +750,114 @@ export class Painter {
                 projectionPrelude,
                 projectionDefine,
                 defines
+            );
+        }
+        return this.cache[key];
+    }
+
+    /**
+     * Compile and cache a custom fill shader program.
+     * The user provides a GLSL fragment snippet that receives:
+     *   vec2 pos    - world-space pixel position (geo-fixed, rotation-aware)
+     *   vec4 color  - fill-color value
+     *   float opacity - fill-opacity value
+     * And must write to: fragColor (vec4)
+     */
+    useCustomFillProgram(customGlsl: string, programConfiguration?: ProgramConfiguration | null): Program<any> {
+        this.cache = this.cache || {};
+        const useTerrain = !!this.style.map.terrain;
+        const projection = this.style.projection;
+        const projectionPrelude = projection.shaderPreludeCode;
+        const projectionDefine = projection.shaderDefine;
+
+        // Simple hash of the custom GLSL for cache key
+        let hash = 0;
+        for (let i = 0; i < customGlsl.length; i++) {
+            hash = ((hash << 5) - hash + customGlsl.charCodeAt(i)) | 0;
+        }
+
+        const configurationKey = (programConfiguration ? programConfiguration.cacheKey : '');
+        const key = `customFill/${hash}${configurationKey}/${projection.shaderVariantName}${useTerrain ? '/terrain' : ''}`;
+
+        if (!this.cache[key]) {
+            // The user provides a complete function:
+            //   vec4 customFill(vec2 pos, vec4 color, float opacity) { ... return ...; }
+            // Plus any helper functions they need.
+            // The template's main() computes pos and calls customFill().
+            let fragmentSource = `
+uniform vec4 u_pattern_matrix;
+uniform vec2 u_pattern_offset;
+uniform vec2 u_screen_center;
+uniform float u_zoom_fraction;
+uniform float u_pattern_scale;
+
+#pragma mapbox: define highp vec4 color
+#pragma mapbox: define lowp float opacity
+
+${customGlsl}
+
+void main() {
+    #pragma mapbox: initialize highp vec4 color
+    #pragma mapbox: initialize lowp float opacity
+
+    vec2 screen = vec2(gl_FragCoord.x, u_screen_center.y * 2.0 - gl_FragCoord.y) - u_screen_center;
+    mat2 rot = mat2(u_pattern_matrix.xy, u_pattern_matrix.zw);
+    vec2 pos = rot * screen + u_pattern_offset;
+
+    fragColor = customFill(pos, color, opacity);
+
+#ifdef OVERDRAW_INSPECTOR
+    fragColor = vec4(1.0);
+#endif
+}
+`;
+            // Expand #pragma mapbox: directives (same logic as shaders.ts prepare())
+            fragmentSource = fragmentSource.replace(
+                /#pragma mapbox: ([\w]+) ([\w]+) ([\w]+) ([\w]+)/g,
+                (match, operation, precision, type, name) => {
+                    if (operation === 'define') {
+                        return `
+#ifndef HAS_UNIFORM_u_${name}
+in ${precision} ${type} ${name};
+#else
+uniform ${precision} ${type} u_${name};
+#endif
+`;
+                    } else {
+                        return `
+#ifdef HAS_UNIFORM_u_${name}
+    ${precision} ${type} ${name} = u_${name};
+#endif
+`;
+                    }
+                }
+            );
+
+            // Reuse the already-prepared fill vertex shader
+            const vertexSource = shaders.fill.vertexSource;
+
+            // Extract static attributes and uniforms for the Program constructor
+            const vertexAttributes = vertexSource.match(/in ([\w]+) ([\w]+)/g);
+            const fragmentUniforms = fragmentSource.match(/uniform ([\w]+) ([\w]+)([\s]*)([\w]*)/g);
+            const vertexUniforms = vertexSource.match(/uniform ([\w]+) ([\w]+)([\s]*)([\w]*)/g);
+            const staticUniforms = vertexUniforms ? vertexUniforms.concat(fragmentUniforms) : fragmentUniforms;
+
+            const prepared: PreparedShader = {
+                fragmentSource,
+                vertexSource,
+                staticAttributes: vertexAttributes,
+                staticUniforms
+            };
+
+            this.cache[key] = new Program(
+                this.context,
+                prepared,
+                programConfiguration,
+                fillHatchUniforms,
+                this._showOverdrawInspector,
+                useTerrain,
+                projectionPrelude,
+                projectionDefine
             );
         }
         return this.cache[key];

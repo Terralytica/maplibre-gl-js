@@ -29,6 +29,10 @@ import fillOutlineFrag from './fill_outline.fragment.glsl.g';
 import fillOutlineVert from './fill_outline.vertex.glsl.g';
 import fillOutlinePatternFrag from './fill_outline_pattern.fragment.glsl.g';
 import fillOutlinePatternVert from './fill_outline_pattern.vertex.glsl.g';
+import fillDotFrag from './fill_dot.fragment.glsl.g';
+import fillDotVert from './fill_dot.vertex.glsl.g';
+import fillHatchFrag from './fill_hatch.fragment.glsl.g';
+import fillHatchVert from './fill_hatch.vertex.glsl.g';
 import fillPatternFrag from './fill_pattern.fragment.glsl.g';
 import fillPatternVert from './fill_pattern.vertex.glsl.g';
 import fillExtrusionFrag from './fill_extrusion.fragment.glsl.g';
@@ -41,6 +45,8 @@ import hillshadeFrag from './hillshade.fragment.glsl.g';
 import hillshadeVert from './hillshade.vertex.glsl.g';
 import lineFrag from './line.fragment.glsl.g';
 import lineVert from './line.vertex.glsl.g';
+import lineHashFrag from './line_hash.fragment.glsl.g';
+import lineHashVert from './line_hash.vertex.glsl.g';
 import lineGradientFrag from './line_gradient.fragment.glsl.g';
 import lineGradientVert from './line_gradient.vertex.glsl.g';
 import linePatternFrag from './line_pattern.fragment.glsl.g';
@@ -97,12 +103,15 @@ export const shaders = {
     fill: prepare(fillFrag, fillVert),
     fillOutline: prepare(fillOutlineFrag, fillOutlineVert),
     fillOutlinePattern: prepare(fillOutlinePatternFrag, fillOutlinePatternVert),
+    fillDot: prepare(fillDotFrag, fillDotVert),
+    fillHatch: prepare(fillHatchFrag, fillHatchVert),
     fillPattern: prepare(fillPatternFrag, fillPatternVert),
     fillExtrusion: prepare(fillExtrusionFrag, fillExtrusionVert),
     fillExtrusionPattern: prepare(fillExtrusionPatternFrag, fillExtrusionPatternVert),
     hillshadePrepare: prepare(hillshadePrepareFrag, hillshadePrepareVert),
     hillshade: prepare(hillshadeFrag, hillshadeVert),
     line: prepare(lineFrag, lineVert),
+    lineHash: prepare(lineHashFrag, lineHashVert),
     lineGradient: prepare(lineGradientFrag, lineGradientVert),
     linePattern: prepare(linePatternFrag, linePatternVert),
     lineSDF: prepare(lineSDFFrag, lineSDFVert),

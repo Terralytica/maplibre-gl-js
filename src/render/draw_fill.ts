@@ -4,6 +4,7 @@ import {CullFaceMode} from '../gl/cull_face_mode';
 import {type ColorMode} from '../gl/color_mode';
 import {
     fillUniformValues,
+    fillHatchUniformValues,
     fillPatternUniformValues,
     fillOutlineUniformValues,
     fillOutlinePatternUniformValues
@@ -78,8 +79,21 @@ function drawFillTiles(
     const propertyFillTranslate = layer.paint.get('fill-translate');
     const propertyFillTranslateAnchor = layer.paint.get('fill-translate-anchor');
 
+    // Detect procedural fills: custom shader, hatch, or dot pattern
+    const customShader = !isOutline && !image && layer.paint.get('fill-custom-shader');
+
+    const hatchColor = layer.paint.get('fill-hatch-color');
+    const hatchColorVal = hatchColor ? hatchColor.constantOr(null) : null;
+    const useHatch = !isOutline && !image && !customShader && hatchColorVal && (hatchColorVal as any).a > 0;
+
+    const dotColor = layer.paint.get('fill-dot-color');
+    const dotColorVal = dotColor ? dotColor.constantOr(null) : null;
+    const useDot = !isOutline && !image && !customShader && !useHatch && dotColorVal && (dotColorVal as any).a > 0;
+
+    const useCustomUniforms = !!(customShader || useHatch || useDot);
+
     if (!isOutline) {
-        programName = image ? 'fillPattern' : 'fill';
+        programName = image ? 'fillPattern' : (customShader ? 'customFill' : (useHatch ? 'fillHatch' : (useDot ? 'fillDot' : 'fill')));
         drawMode = gl.TRIANGLES;
     } else {
         programName = image && !layer.getPaintProperty('fill-outline-color') ? 'fillOutlinePattern' : 'fillOutline';
@@ -96,7 +110,9 @@ function drawFillTiles(
         if (!bucket) continue;
 
         const programConfiguration = bucket.programConfigurations.get(layer.id);
-        const program = painter.useProgram(programName, programConfiguration);
+        const program = customShader
+            ? painter.useCustomFillProgram(customShader, programConfiguration)
+            : painter.useProgram(programName, programConfiguration);
         const terrainData = painter.style.map.terrain && painter.style.map.terrain.getTerrainData(coord);
 
         if (image) {
@@ -118,7 +134,11 @@ function drawFillTiles(
         if (!isOutline) {
             indexBuffer = bucket.indexBuffer;
             segments = bucket.segments;
-            uniformValues = image ? fillPatternUniformValues(painter, crossfade, tile, translateForUniforms) : fillUniformValues(translateForUniforms);
+            uniformValues = image
+                ? fillPatternUniformValues(painter, crossfade, tile, translateForUniforms)
+                : useCustomUniforms
+                    ? fillHatchUniformValues(painter, translateForUniforms)
+                    : fillUniformValues(translateForUniforms);
         } else {
             indexBuffer = bucket.indexBuffer2;
             segments = bucket.segments2;

@@ -158,11 +158,15 @@ export function drawLine(painter: Painter, tileManager: TileManager, layer: Line
     const gradient = layer.paint.get('line-gradient');
     const crossfade = layer.getCrossfadeParameters();
 
+    const hashInterval = layer.paint.get('line-hash-interval');
+    const useHash = hashInterval && hashInterval.constantOr(0) > 0;
+
     let programId: string;
     if (image) programId = 'linePattern';
     else if (dasharray && gradient) programId = 'lineGradientSDF';
     else if (dasharray) programId = 'lineSDF';
     else if (gradient) programId = 'lineGradient';
+    else if (useHash) programId = 'lineHash';
     else programId = 'line';
 
     const context = painter.context;

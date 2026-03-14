@@ -240,8 +240,12 @@ function calculateTranslation(painter: Painter, tile: Tile, layer: LineStyleLaye
     );
 }
 
+// lineHash reuses the same uniforms as line; hash properties go through the pragma binder system
+const lineHashUniforms = lineUniforms;
+
 export {
     lineUniforms,
+    lineHashUniforms,
     lineGradientUniforms,
     linePatternUniforms,
     lineSDFUniforms,
