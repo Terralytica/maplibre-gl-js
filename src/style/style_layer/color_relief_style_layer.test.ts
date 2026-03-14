@@ -1,6 +1,6 @@
 import {describe, test, expect, vi} from 'vitest';
 import {ColorReliefStyleLayer} from './color_relief_style_layer';
-import {Color, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {createStyleLayer} from '../create_style_layer';
 import {extend} from '../../util/util';
 import {type EvaluationParameters} from '../evaluation_parameters';

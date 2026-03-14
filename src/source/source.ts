@@ -7,7 +7,7 @@ import {ImageSource} from '../source/image_source';
 import {CanvasSource} from '../source/canvas_source';
 import {type Dispatcher} from '../util/dispatcher';
 
-import type {SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {Event, Evented} from '../util/evented';
 import type {Map} from '../ui/map';
 import type {Tile} from '../tile/tile';

@@ -25,7 +25,7 @@ import type {Style} from '../style/style';
 import type {Dispatcher} from '../util/dispatcher';
 import type {IReadonlyTransform, ITransform} from '../geo/transform_interface';
 import type {TileState} from './tile';
-import type {ICanonicalTileID, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ICanonicalTileID, SourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {MapSourceDataEvent} from '../ui/events';
 import type {Terrain} from '../render/terrain';
 import type {CanvasSourceSpecification} from '../source/canvas_source';

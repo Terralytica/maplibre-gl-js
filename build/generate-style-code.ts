@@ -2,7 +2,7 @@
 
 import * as fs from 'fs';
 
-import {v8} from '@maplibre/maplibre-gl-style-spec';
+import {v8} from '@terralytica/maplibre-gl-style-spec';
 
 function camelCase(str: string): string {
     return str.replace(/-(.)/g, (_, x) => {
@@ -177,7 +177,7 @@ function emitlayerProperties(locals) {
         `// This file is generated. Edit build/generate-style-code.ts, then run 'npm run codegen'.
 /* eslint-disable */
 
-import {latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec} from '@terralytica/maplibre-gl-style-spec';
 
 import {
     Properties,
@@ -190,15 +190,15 @@ import {
     CrossFaded
 } from '../properties';
 
-import type {Color, Formatted, Padding, NumberArray, ColorArray, ResolvedImage, VariableAnchorOffsetCollection} from '@maplibre/maplibre-gl-style-spec';
-import {StylePropertySpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Color, Formatted, Padding, NumberArray, ColorArray, ResolvedImage, VariableAnchorOffsetCollection} from '@terralytica/maplibre-gl-style-spec';
+import {StylePropertySpecification} from '@terralytica/maplibre-gl-style-spec';
 `);
 
     const overridables = paintProperties.filter(p => p.overridable);
     if (overridables.length) {
         const overridesArray = `import {
             ${overridables.reduce((imports, prop) => { imports.push(runtimeType(prop)); return imports; }, []).join(',\n    ')}
-        } from '@maplibre/maplibre-gl-style-spec';
+        } from '@terralytica/maplibre-gl-style-spec';
         `;
         output.push(overridesArray);
     }

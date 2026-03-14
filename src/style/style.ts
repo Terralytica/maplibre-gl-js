@@ -20,7 +20,7 @@ import {type Source} from '../source/source';
 import {type QueryRenderedFeaturesOptions, type QueryRenderedFeaturesOptionsStrict, type QueryRenderedFeaturesResults, type QueryRenderedFeaturesResultsItem, type QuerySourceFeatureOptions, queryRenderedFeatures, queryRenderedSymbols, querySourceFeatures} from '../source/query_features';
 import {TileManager} from '../tile/tile_manager';
 import {type GeoJSONSource} from '../source/geojson_source';
-import {latest as styleSpec, derefLayers, emptyStyle, diff as diffStyles, type DiffCommand} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec, derefLayers, emptyStyle, diff as diffStyles, type DiffCommand} from '@terralytica/maplibre-gl-style-spec';
 import {getGlobalWorkerPool} from '../util/global_worker_pool';
 import {rtlMainThreadPluginFactory} from '../source/rtl_text_plugin_main_thread';
 import {RTLPluginLoadedEventName} from '../source/rtl_text_plugin_status';
@@ -56,7 +56,7 @@ import type {
     ProjectionSpecification,
     SkySpecification,
     StateSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@terralytica/maplibre-gl-style-spec';
 import type {CanvasSourceSpecification} from '../source/canvas_source';
 import type {CustomLayerInterface} from './style_layer/custom_style_layer';
 import type {Validator} from './validate_style';

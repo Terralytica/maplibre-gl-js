@@ -5,7 +5,7 @@ import {angularCoordinatesToSurfaceVector, computeGlobePanCenter, getGlobeRadius
 import {clamp, createVec3f64, differenceOfAnglesDegrees, MAX_VALID_LATITUDE, remapSaturate, rollPitchBearingEqual, scaleZoom, warnOnce, zoomScale} from '../../util/util';
 import {type mat4, vec3} from 'gl-matrix';
 import {normalizeCenter} from '../transform_helper';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 
 import type {IReadonlyTransform, ITransform} from '../transform_interface';
 import type {CameraForBoundsOptions} from '../../ui/camera';

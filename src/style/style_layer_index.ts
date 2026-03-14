@@ -1,8 +1,8 @@
 import {createStyleLayer} from './create_style_layer';
-import {featureFilter, groupByLayout} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter, groupByLayout} from '@terralytica/maplibre-gl-style-spec';
 import {GEOJSON_TILE_LAYER_NAME} from '../data/feature_index';
 import type {StyleLayer} from './style_layer';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 export type LayerConfigs = {[_: string]: LayerSpecification};
 

@@ -4,7 +4,7 @@ import {extend} from '../../util/util';
 import {type Dispatcher} from '../../util/dispatcher';
 import {type IActor} from '../actor';
 import {Evented} from '../evented';
-import {type SourceSpecification, type StyleSpecification, type TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type SourceSpecification, type StyleSpecification, type TerrainSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {MercatorTransform} from '../../geo/projection/mercator_transform';
 import {RequestManager} from '../request_manager';
 import {type IReadonlyTransform, type ITransform} from '../../geo/transform_interface';

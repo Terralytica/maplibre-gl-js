@@ -4,7 +4,7 @@ import properties, {type ColorReliefPaintPropsPossiblyEvaluated} from './color_r
 import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
 
 import type {ColorReliefPaintProps} from './color_relief_style_layer_properties.g';
-import {Color, Interpolate, ZoomConstantExpression, type LayerSpecification, type EvaluationContext, type StylePropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {Color, Interpolate, ZoomConstantExpression, type LayerSpecification, type EvaluationContext, type StylePropertyExpression} from '@terralytica/maplibre-gl-style-spec';
 import {warnOnce} from '../../util/util';
 import {Texture} from '../../render/texture';
 import {RGBAImage} from '../../util/image';

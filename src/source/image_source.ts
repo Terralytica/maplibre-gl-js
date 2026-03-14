@@ -13,7 +13,7 @@ import type {Tile} from '../tile/tile';
 import type {
     ImageSourceSpecification,
     VideoSourceSpecification
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@terralytica/maplibre-gl-style-spec';
 import type Point from '@mapbox/point-geometry';
 import {MAX_TILE_ZOOM} from '../util/util';
 import {Bounds} from '../geo/bounds';

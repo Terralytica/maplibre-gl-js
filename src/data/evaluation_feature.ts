@@ -1,6 +1,6 @@
 import {loadGeometry} from './load_geometry';
 import type Point from '@mapbox/point-geometry';
-import type {Feature} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature} from '@terralytica/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike} from '@maplibre/vt-pbf';
 
 type EvaluationFeature = Feature & { geometry: Array<Array<Point>> };

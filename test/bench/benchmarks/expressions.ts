@@ -1,9 +1,9 @@
 import Benchmark from '../lib/benchmark';
 
-import {latest as spec, convertFunction, isFunction, createFunction, createPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {latest as spec, convertFunction, isFunction, createFunction, createPropertyExpression} from '@terralytica/maplibre-gl-style-spec';
 import fetchStyle from '../lib/fetch_style';
 
-import type {StyleSpecification, StylePropertyExpression, StylePropertySpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification, StylePropertyExpression, StylePropertySpecification} from '@terralytica/maplibre-gl-style-spec';
 
 interface DataT {
     propertySpec: StylePropertySpecification;

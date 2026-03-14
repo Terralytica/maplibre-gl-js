@@ -9,7 +9,7 @@ import type {CollisionBoxArray} from '../data/array_types.g';
 import type {DEMEncoding} from '../data/dem_data';
 import type {StyleGlyph} from '../style/style_glyph';
 import type {StyleImage} from '../style/style_image';
-import type {PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {PromoteIdSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {RemoveSourceParams} from '../util/actor_messages';
 import type {IActor} from '../util/actor';
 import type {StyleLayerIndex} from '../style/style_layer_index';

@@ -5,7 +5,7 @@ import type {StyleLayer} from '../style/style_layer';
 import type {CollisionIndex} from '../symbol/collision_index';
 import type {IReadonlyTransform} from '../geo/transform_interface';
 import type {RetainedQueryData} from '../symbol/placement';
-import type {FilterSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FilterSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {GeoJSONFeature, MapGeoJSONFeature} from '../util/vectortile_to_geojson';
 import type {QueryResults, QueryResultsItem} from '../data/feature_index';
 import type {OverscaledTileID} from '../tile/tile_id';

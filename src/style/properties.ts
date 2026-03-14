@@ -5,7 +5,7 @@ import {interpolates, type Color, type StylePropertySpecification, normalizeProp
     type StylePropertyExpression,
     type SourceExpression,
     type CompositeExpression, type TransitionSpecification,
-    type PropertyValueSpecification} from '@maplibre/maplibre-gl-style-spec';
+    type PropertyValueSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {register} from '../util/web_worker_transfer';
 import {EvaluationParameters} from './evaluation_parameters';
 

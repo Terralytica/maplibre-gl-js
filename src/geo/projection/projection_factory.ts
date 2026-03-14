@@ -9,7 +9,7 @@ import {VerticalPerspectiveCameraHelper} from './vertical_perspective_camera_hel
 import {VerticalPerspectiveTransform} from './vertical_perspective_transform';
 import {VerticalPerspectiveProjection} from './vertical_perspective_projection';
 
-import type {ProjectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {Projection} from './projection';
 import type {ITransform, TransformConstrainFunction} from '../transform_interface';
 import type {ICameraHelper} from './camera_helper';

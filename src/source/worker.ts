@@ -16,7 +16,7 @@ import type {
 } from '../source/worker_source';
 
 import type {WorkerGlobalScopeInterface} from '../util/web_worker';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {
     MessageType,
     type ClusterIDAndSource,

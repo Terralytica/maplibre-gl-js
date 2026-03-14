@@ -8,7 +8,7 @@ import {
 import type {Context} from '../../gl/context';
 import type {UniformValues, UniformLocations} from '../../render/uniform_binding';
 import {type Sky} from '../../style/sky';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@terralytica/maplibre-gl-style-spec';
 import {type mat4} from 'gl-matrix';
 
 export type TerrainPreludeUniformsType = {

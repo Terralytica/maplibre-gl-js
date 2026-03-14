@@ -4,7 +4,7 @@ import {ResourceType} from '../util/request_manager';
 import {browser} from '../util/browser';
 
 import type {RequestManager} from '../util/request_manager';
-import type {RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {RasterDEMSourceSpecification, RasterSourceSpecification, VectorSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 export type LoadTileJsonResponse = {
     tiles: Array<string>;

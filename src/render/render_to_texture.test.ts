@@ -11,7 +11,7 @@ import {Tile} from '../tile/tile';
 import {type Map} from '../ui/map';
 import {OverscaledTileID} from '../tile/tile_id';
 import {type TileManager} from '../tile/tile_manager';
-import {type TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type TerrainSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type FillStyleLayer} from '../style/style_layer/fill_style_layer';
 import {type RasterStyleLayer} from '../style/style_layer/raster_style_layer';
 import {type HillshadeStyleLayer} from '../style/style_layer/hillshade_style_layer';

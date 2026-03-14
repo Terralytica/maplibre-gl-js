@@ -1,6 +1,6 @@
 import {describe, test, expect, vi} from 'vitest';
 import {type TileManager} from '../tile/tile_manager';
-import {type RasterSourceSpecification, type SourceSpecification, type VectorSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type RasterSourceSpecification, type SourceSpecification, type VectorSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {Style} from '../style/style';
 import {FillStyleLayer} from '../style/style_layer/fill_style_layer';
 import {RasterStyleLayer} from '../style/style_layer/raster_style_layer';

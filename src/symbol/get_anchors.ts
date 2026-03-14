@@ -1,4 +1,4 @@
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 
 import {Anchor} from '../symbol/anchor';
 import {checkMaxAngle} from './check_max_angle';

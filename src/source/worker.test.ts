@@ -1,7 +1,7 @@
 import {describe, beforeEach, test, expect, vi} from 'vitest';
 import {fakeServer} from 'nise';
 import Worker from './worker';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type WorkerGlobalScopeInterface} from '../util/web_worker';
 import {type CanonicalTileID, type OverscaledTileID} from '../tile/tile_id';
 import {type WorkerSource, type WorkerTileParameters, type WorkerTileResult} from './worker_source';

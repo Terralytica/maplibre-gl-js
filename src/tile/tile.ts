@@ -2,7 +2,7 @@ import {uniqueId, parseCacheControl} from '../util/util';
 import {deserialize as deserializeBucket} from '../data/bucket';
 import {GEOJSON_TILE_LAYER_NAME, type FeatureIndex, type QueryResults} from '../data/feature_index';
 import {GeoJSONFeature} from '../util/vectortile_to_geojson';
-import {featureFilter} from '@maplibre/maplibre-gl-style-spec';
+import {featureFilter} from '@terralytica/maplibre-gl-style-spec';
 import {SymbolBucket} from '../data/bucket/symbol_bucket';
 import {CollisionBoxArray} from '../data/array_types.g';
 import {Texture} from '../render/texture';

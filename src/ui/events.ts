@@ -7,7 +7,7 @@ import type {MapGeoJSONFeature} from '../util/vectortile_to_geojson';
 
 import type {Map} from './map';
 import type {LngLat} from '../geo/lng_lat';
-import type {ProjectionSpecification, SourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ProjectionSpecification, SourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type GeoJSONSourceShouldReloadTileOptions} from '../source/geojson_source';
 
 /**

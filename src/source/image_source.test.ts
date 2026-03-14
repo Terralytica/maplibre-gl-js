@@ -9,7 +9,7 @@ import {sleep, stubAjaxGetImage, waitForEvent} from '../util/test/util';
 import {Tile} from '../tile/tile';
 import {OverscaledTileID} from '../tile/tile_id';
 import {type Texture} from '../render/texture';
-import type {ImageSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {ImageSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {MercatorTransform} from '../geo/projection/mercator_transform';
 
 function createSource(options) {

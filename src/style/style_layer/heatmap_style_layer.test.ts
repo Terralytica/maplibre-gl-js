@@ -1,6 +1,6 @@
 import {describe, test, expect} from 'vitest';
 import {HeatmapStyleLayer} from './heatmap_style_layer';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type EvaluationParameters} from '../evaluation_parameters';
 import {type CanonicalTileID, UnwrappedTileID} from '../../tile/tile_id';
 import Point from '@mapbox/point-geometry';

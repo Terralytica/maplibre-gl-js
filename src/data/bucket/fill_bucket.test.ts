@@ -4,7 +4,7 @@ import Point from '@mapbox/point-geometry';
 import {SegmentVector} from '../segment';
 import {FillBucket} from './fill_bucket';
 import {FillStyleLayer} from '../../style/style_layer/fill_style_layer';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type EvaluationParameters} from '../../style/evaluation_parameters';
 import {type ZoomHistory} from '../../style/zoom_history';
 import {type BucketFeature, type BucketParameters} from '../bucket';

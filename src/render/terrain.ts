@@ -19,7 +19,7 @@ import type Point from '@mapbox/point-geometry';
 import type {Tile} from '../tile/tile';
 import type {Framebuffer} from '../gl/framebuffer';
 import type {TileManager} from '../tile/tile_manager';
-import type {TerrainSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {TerrainSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {Painter} from './painter';
 import type {IReadonlyTransform} from '../geo/transform_interface';
 

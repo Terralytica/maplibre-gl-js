@@ -2,7 +2,7 @@ import {describe, test, expect} from 'vitest';
 import {createStyleLayer} from './create_style_layer';
 import {FillStyleLayer} from './style_layer/fill_style_layer';
 import {extend} from '../util/util';
-import {Color, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type EvaluationParameters} from './evaluation_parameters';
 import {type TransitionParameters} from './properties';
 import {type BackgroundStyleLayer} from './style_layer/background_style_layer';

@@ -1,4 +1,4 @@
-import {VariableAnchorOffsetCollection, type VariableAnchorOffsetCollectionSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {VariableAnchorOffsetCollection, type VariableAnchorOffsetCollectionSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type SymbolFeature} from '../../data/bucket/symbol_bucket';
 import {type CanonicalTileID} from '../../tile/tile_id';
 import ONE_EM from '../../symbol/one_em';

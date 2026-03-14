@@ -4,7 +4,7 @@ import properties, {type BackgroundPaintPropsPossiblyEvaluated} from './backgrou
 import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
 
 import type {BackgroundPaintProps} from './background_style_layer_properties.g';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 export const isBackgroundStyleLayer = (layer: StyleLayer): layer is BackgroundStyleLayer => layer.type === 'background';
 

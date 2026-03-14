@@ -1,6 +1,6 @@
 import {describe, expect, test, vi} from 'vitest';
 import {Sky} from './sky';
-import {latest as styleSpec, type SkySpecification} from '@maplibre/maplibre-gl-style-spec';
+import {latest as styleSpec, type SkySpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type EvaluationParameters} from './evaluation_parameters';
 import {type TransitionParameters} from './properties';
 

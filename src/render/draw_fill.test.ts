@@ -9,7 +9,7 @@ import type {ZoomHistory} from '../style/zoom_history';
 import type {Map} from '../ui/map';
 import {type IReadonlyTransform} from '../geo/transform_interface';
 import type {EvaluationParameters} from '../style/evaluation_parameters';
-import type {FillLayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {FillLayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {type Style} from '../style/style';
 import {FillStyleLayer} from '../style/style_layer/fill_style_layer';
 import {drawFill} from './draw_fill';

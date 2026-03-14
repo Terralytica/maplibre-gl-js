@@ -34,7 +34,7 @@ import {getSizeData, MAX_PACKED_SIZE} from '../../symbol/symbol_size';
 
 import {register} from '../../util/web_worker_transfer';
 import {EvaluationParameters} from '../../style/evaluation_parameters';
-import {Formatted, ResolvedImage} from '@maplibre/maplibre-gl-style-spec';
+import {Formatted, ResolvedImage} from '@terralytica/maplibre-gl-style-spec';
 import {rtlWorkerPlugin} from '../../source/rtl_text_plugin_worker';
 import {getOverlapMode} from '../../style/style_layer/overlap_mode';
 import type {CanonicalTileID} from '../../tile/tile_id';

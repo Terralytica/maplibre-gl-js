@@ -4,7 +4,7 @@ import {loadTileJson} from './load_tilejson';
 import {RequestManager} from '../util/request_manager';
 import {ABORT_ERROR} from '../util/abort_error';
 
-import {type RasterSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type RasterSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 describe('loadTileJson', () => {
     let server: FakeServer;

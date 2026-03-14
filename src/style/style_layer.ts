@@ -1,6 +1,6 @@
 import {filterObject} from '../util/util';
 
-import {createVisibilityExpression, featureFilter, latest as styleSpec, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {createVisibilityExpression, featureFilter, latest as styleSpec, supportsPropertyExpression} from '@terralytica/maplibre-gl-style-spec';
 import {
     validateStyle,
     validateLayoutProperty,
@@ -19,7 +19,7 @@ import type {
     FilterSpecification,
     VisibilitySpecification,
     VisibilityExpression
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@terralytica/maplibre-gl-style-spec';
 import type {TransitionParameters, PropertyValue} from './properties';
 import {type EvaluationParameters} from './evaluation_parameters';
 import type {CrossfadeParameters} from './evaluation_parameters';

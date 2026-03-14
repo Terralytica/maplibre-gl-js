@@ -77,7 +77,7 @@ import type {DashEntry} from './render/line_atlas';
 import type {Painter} from './render/painter';
 const version = packageJSON.version;
 
-export type * from '@maplibre/maplibre-gl-style-spec';
+export type * from '@terralytica/maplibre-gl-style-spec';
 
 /**
  * Sets the map's [RTL text plugin](https://www.mapbox.com/mapbox-gl-js/plugins/#mapbox-gl-rtl-text).

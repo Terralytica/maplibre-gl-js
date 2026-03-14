@@ -4,7 +4,7 @@ import {terrainUniformValues, terrainDepthUniformValues, terrainCoordsUniformVal
 import type {Painter, RenderOptions} from './painter';
 import type {Tile} from '../tile/tile';
 import {CullFaceMode} from '../gl/cull_face_mode';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@terralytica/maplibre-gl-style-spec';
 import {ColorMode} from '../gl/color_mode';
 import {type Terrain} from './terrain';
 

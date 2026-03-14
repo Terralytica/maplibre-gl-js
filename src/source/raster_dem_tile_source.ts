@@ -13,7 +13,7 @@ import type {DEMEncoding} from '../data/dem_data';
 import type {Source} from './source';
 import type {Dispatcher} from '../util/dispatcher';
 import type {Tile} from '../tile/tile';
-import type {RasterDEMSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {RasterDEMSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {isOffscreenCanvasDistorted} from '../util/offscreen_canvas_distorted';
 import {RGBAImage} from '../util/image';
 import {MessageType} from '../util/actor_messages';

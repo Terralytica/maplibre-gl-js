@@ -1,4 +1,4 @@
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 import Point from '@mapbox/point-geometry';
 import {clamp, type Complete, type RequireAtLeastOne} from '../util/util';
 

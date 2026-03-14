@@ -4,7 +4,7 @@ import properties, {type RasterPaintPropsPossiblyEvaluated} from './raster_style
 import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
 
 import type {RasterPaintProps} from './raster_style_layer_properties.g';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 export const isRasterStyleLayer = (layer: StyleLayer): layer is RasterStyleLayer => layer.type === 'raster';
 

@@ -6,7 +6,7 @@ import {type PaddingOptions} from '../edge_insets';
 import {type LngLatBounds} from '../lng_lat_bounds';
 import {degreesToRadians, getRollPitchBearing, type RollPitchBearing, rollPitchBearingToQuat, scaleZoom, warnOnce, zoomScale} from '../../util/util';
 import {quat} from 'gl-matrix';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 import {projectToWorldCoordinates, unprojectFromWorldCoordinates} from './mercator_utils';
 
 export type MapControlsDeltas = {

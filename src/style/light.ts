@@ -1,4 +1,4 @@
-import {interpolates, type Color, latest as styleSpec} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates, type Color, latest as styleSpec} from '@terralytica/maplibre-gl-style-spec';
 
 import {sphericalToCartesian} from '../util/util';
 import {Evented} from '../util/evented';
@@ -8,7 +8,7 @@ import {
     emitValidationErrors
 } from './validate_style';
 
-import type {StylePropertySpecification, LightSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StylePropertySpecification, LightSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {EvaluationParameters} from './evaluation_parameters';
 import type {StyleSetterOptions} from '../style/style';
 import {Properties, Transitionable, type Transitioning, type PossiblyEvaluated, DataConstantProperty, TRANSITION_SUFFIX} from './properties';

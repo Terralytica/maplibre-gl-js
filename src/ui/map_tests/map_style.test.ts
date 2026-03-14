@@ -6,7 +6,7 @@ import {fixedLngLat, fixedNum} from '../../../test/unit/lib/fixed';
 import {extend} from '../../util/util';
 import {fakeServer, type FakeServer} from 'nise';
 import {Style} from '../../style/style';
-import {type GeoJSONSourceSpecification, type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type GeoJSONSourceSpecification, type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {LngLatBounds} from '../../geo/lng_lat_bounds';
 
 let server: FakeServer;

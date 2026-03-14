@@ -1,4 +1,4 @@
-import type {Formatted, FormattedSection, VerticalAlign} from '@maplibre/maplibre-gl-style-spec';
+import type {Formatted, FormattedSection, VerticalAlign} from '@terralytica/maplibre-gl-style-spec';
 
 import ONE_EM from './one_em';
 import type {ImagePosition} from '../render/image_atlas';

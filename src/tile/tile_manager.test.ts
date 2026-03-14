@@ -1,4 +1,4 @@
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {describe, beforeEach, afterEach, test, expect, vi} from 'vitest';
 import {TileManager} from './tile_manager';
 import {type Source, addSourceType} from '../source/source';

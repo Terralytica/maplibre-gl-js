@@ -4,7 +4,7 @@ import {cameraForBoxAndBearing, type CameraForBoxAndBearingHandlerResult, type E
 import {normalizeCenter} from '../transform_helper';
 import {rollPitchBearingEqual, scaleZoom, zoomScale} from '../../util/util';
 import {getMercatorHorizon, projectToWorldCoordinates, unprojectFromWorldCoordinates} from './mercator_utils';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 
 import type {IReadonlyTransform, ITransform} from '../transform_interface';
 import type {CameraForBoundsOptions} from '../../ui/camera';

@@ -1,5 +1,5 @@
 import {describe, test, expect, vi} from 'vitest';
-import {type LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {createStyleLayer} from '../create_style_layer';
 import {extend} from '../../util/util';
 

@@ -6,7 +6,7 @@ import {ProgramConfigurationSet} from '../program_configuration';
 import {TriangleIndexArray} from '../index_array_type';
 import {EXTENT} from '../extent';
 import {VectorTileFeature} from '@mapbox/vector-tile';
-import {classifyRings} from '@maplibre/maplibre-gl-style-spec';
+import {classifyRings} from '@terralytica/maplibre-gl-style-spec';
 const EARCUT_MAX_RINGS = 500;
 import {register} from '../../util/web_worker_transfer';
 import {hasPattern, addPatternDependencies} from './pattern_bucket_features';

@@ -9,7 +9,7 @@ import type {CanonicalTileID} from '../tile/tile_id';
 import type Point from '@mapbox/point-geometry';
 import type {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings';
 import type {DashEntry} from '../render/line_atlas';
-import type {Feature as StyleFeature} from '@maplibre/maplibre-gl-style-spec';
+import type {Feature as StyleFeature} from '@terralytica/maplibre-gl-style-spec';
 import type {VectorTileFeatureLike, VectorTileLayerLike} from '@maplibre/vt-pbf';
 
 export type BucketParameters<Layer extends TypedStyleLayer> = {

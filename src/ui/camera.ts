@@ -1,5 +1,5 @@
 import {extend, wrap, defaultEasing, pick, scaleZoom, evaluateZoomSnap} from '../util/util';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 import {browser} from '../util/browser';
 import {now} from '../util/time_control';
 import {LngLat} from '../geo/lng_lat';

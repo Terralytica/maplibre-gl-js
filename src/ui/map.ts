@@ -62,7 +62,7 @@ import type {
     TerrainSpecification,
     ProjectionSpecification,
     SkySpecification,
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@terralytica/maplibre-gl-style-spec';
 import type {CanvasSourceSpecification} from '../source/canvas_source';
 import type {GeoJSONFeature, MapGeoJSONFeature} from '../util/vectortile_to_geojson';
 import type {ControlPosition, IControl} from './control/control';

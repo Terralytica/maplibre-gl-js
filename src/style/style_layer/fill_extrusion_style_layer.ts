@@ -7,7 +7,7 @@ import properties, {type FillExtrusionPaintPropsPossiblyEvaluated} from './fill_
 import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
 import {type mat4, vec4} from 'gl-matrix';
 import Point from '@mapbox/point-geometry';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {BucketParameters} from '../../data/bucket';
 import type {FillExtrusionPaintProps} from './fill_extrusion_style_layer_properties.g';
 

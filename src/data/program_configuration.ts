@@ -1,5 +1,5 @@
 import {packUint8ToFloat} from '../shaders/encode_attribute';
-import {type Color, supportsPropertyExpression} from '@maplibre/maplibre-gl-style-spec';
+import {type Color, supportsPropertyExpression} from '@terralytica/maplibre-gl-style-spec';
 import {register} from '../util/web_worker_transfer';
 import {PossiblyEvaluatedPropertyValue} from '../style/properties';
 import {StructArrayLayout1f4, StructArrayLayout2f8, StructArrayLayout4f16, PatternLayoutArray, DashLayoutArray} from './array_types.g';
@@ -26,7 +26,7 @@ import type {
     SourceExpression,
     CompositeExpression,
     FormattedSection
-} from '@maplibre/maplibre-gl-style-spec';
+} from '@terralytica/maplibre-gl-style-spec';
 import type {FeatureStates} from '../source/source_state';
 import type {DashEntry} from '../render/line_atlas';
 import type {VectorTileLayerLike} from '@maplibre/vt-pbf';

@@ -1,6 +1,6 @@
 import {extend} from '../util/util';
 import type {Tile} from '../tile/tile';
-import type {FeatureState} from '@maplibre/maplibre-gl-style-spec';
+import type {FeatureState} from '@terralytica/maplibre-gl-style-spec';
 import type {InViewTiles} from '../tile/tile_manager_in_view_tiles';
 
 export type FeatureStates = {[featureId: string]: FeatureState};

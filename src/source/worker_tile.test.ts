@@ -7,7 +7,7 @@ import {type WorkerTileParameters, type WorkerTileWithData} from './worker_sourc
 import {SubdivisionGranularitySetting} from '../render/subdivision_granularity_settings';
 import {type EvaluationParameters} from '../style/evaluation_parameters';
 import {type PossiblyEvaluated} from '../style/properties';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@terralytica/maplibre-gl-style-spec';
 import {type CirclePaintProps, type CirclePaintPropsPossiblyEvaluated} from '../style/style_layer/circle_style_layer_properties.g';
 import {type SymbolLayoutProps, type SymbolLayoutPropsPossiblyEvaluated} from '../style/style_layer/symbol_style_layer_properties.g';
 import {MessageType} from '../util/actor_messages';

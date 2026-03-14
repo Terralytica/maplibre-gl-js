@@ -9,7 +9,7 @@ import type {StyleGlyph} from '../style/style_glyph';
 import type {RequestManager} from '../util/request_manager';
 import type {GetGlyphsResponse} from '../util/actor_messages';
 
-import {v8} from '@maplibre/maplibre-gl-style-spec';
+import {v8} from '@terralytica/maplibre-gl-style-spec';
 
 type Entry = {
     // null means we've requested the range, but the glyph wasn't included in the result.

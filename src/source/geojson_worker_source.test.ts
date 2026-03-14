@@ -10,7 +10,7 @@ import {SubdivisionGranularitySetting} from '../render/subdivision_granularity_s
 import type {GeoJSONVT} from '@maplibre/geojson-vt';
 import type {Actor, IActor} from '../util/actor';
 import type {TileParameters, WorkerTileParameters, WorkerTileResult, WorkerTileWithData} from './worker_source';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {WorkerTile} from './worker_tile';
 
 const actor = {send: () => {}} as any as Actor;

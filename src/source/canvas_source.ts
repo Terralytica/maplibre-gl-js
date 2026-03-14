@@ -2,7 +2,7 @@ import {ImageSource} from './image_source';
 
 import {Texture} from '../render/texture';
 import {Event, ErrorEvent} from '../util/evented';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import {ValidationError} from '@terralytica/maplibre-gl-style-spec';
 
 import type {Map} from '../ui/map';
 import type {Dispatcher} from '../util/dispatcher';

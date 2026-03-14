@@ -1,6 +1,6 @@
 import {describe, test, expect, vi} from 'vitest';
 import {Light} from './light';
-import {Color, latest as styleSpec, type LightSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {Color, latest as styleSpec, type LightSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {sphericalToCartesian} from '../util/util';
 import {type EvaluationParameters} from './evaluation_parameters';
 import {type TransitionParameters} from './properties';

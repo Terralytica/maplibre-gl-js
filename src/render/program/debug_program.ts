@@ -2,7 +2,7 @@ import {UniformColor, Uniform1i, Uniform1f} from '../uniform_binding';
 
 import type {Context} from '../../gl/context';
 import type {UniformValues, UniformLocations} from '../uniform_binding';
-import type {Color} from '@maplibre/maplibre-gl-style-spec';
+import type {Color} from '@terralytica/maplibre-gl-style-spec';
 
 export type DebugUniformsType = {
     'u_color': UniformColor;

@@ -9,7 +9,7 @@ import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '.
 import type {Texture} from '../../render/texture';
 import type {Framebuffer} from '../../gl/framebuffer';
 import type {HeatmapPaintProps} from './heatmap_style_layer_properties.g';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 import {circleIntersection, getMaximumPaintValue} from '../query_utils';
 import type {Bucket} from '../../data/bucket';

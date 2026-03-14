@@ -4,12 +4,12 @@ import {ResourceType} from '../util/request_manager';
 import {ImageSource} from './image_source';
 import {Texture} from '../render/texture';
 import {Event, ErrorEvent} from '../util/evented';
-import {ValidationError} from '@maplibre/maplibre-gl-style-spec';
+import {ValidationError} from '@terralytica/maplibre-gl-style-spec';
 
 import type {Map} from '../ui/map';
 import type {Dispatcher} from '../util/dispatcher';
 import type {Evented} from '../util/evented';
-import type {VideoSourceSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {VideoSourceSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 /**
  * A data source containing video.

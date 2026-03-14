@@ -3,7 +3,7 @@ import {RequestPerformance} from '../util/performance';
 import {GeoJSONWrapper} from '@maplibre/vt-pbf';
 import {EXTENT} from '../data/extent';
 import {GeoJSONVT, type GeoJSONVTOptions, type SuperclusterOptions, type ClusterProperties} from '@maplibre/geojson-vt';
-import {createExpression, type FilterSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {createExpression, type FilterSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {isAbortError} from '../util/abort_error';
 import {toVirtualVectorTile} from './vector_tile_overzoomed';
 import {WorkerTile} from './worker_tile';

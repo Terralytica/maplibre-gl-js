@@ -15,7 +15,7 @@ import type {Dispatcher} from '../util/dispatcher';
 import type {Tile} from '../tile/tile';
 import type {Actor} from '../util/actor';
 import type {GeoJSONWorkerSourceLoadDataResult} from '../util/actor_messages';
-import type {GeoJSONSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {GeoJSONSourceSpecification, PromoteIdSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {GeoJSONFeatureId, GeoJSONSourceDiff} from './geojson_source_diff';
 import type {GeoJSONWorkerOptions, LoadGeoJSONParameters} from './geojson_worker_source';
 import type {WorkerTileParameters} from './worker_source';

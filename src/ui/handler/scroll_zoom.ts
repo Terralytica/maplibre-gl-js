@@ -2,7 +2,7 @@ import {DOM} from '../../util/dom';
 
 import {defaultEasing, bezier, zoomScale, scaleZoom, evaluateZoomSnap} from '../../util/util';
 import {now} from '../../util/time_control';
-import {interpolates} from '@maplibre/maplibre-gl-style-spec';
+import {interpolates} from '@terralytica/maplibre-gl-style-spec';
 import {LngLat} from '../../geo/lng_lat';
 import {TransformProvider} from './transform-provider';
 

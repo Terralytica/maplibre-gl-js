@@ -12,7 +12,7 @@ import type {OverscaledTileID} from '../tile/tile_id';
 import type {Map} from '../ui/map';
 import type {Dispatcher} from '../util/dispatcher';
 import type {Tile} from '../tile/tile';
-import type {VectorSourceSpecification, PromoteIdSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {VectorSourceSpecification, PromoteIdSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {WorkerTileParameters, OverzoomParameters, WorkerTileResult} from './worker_source';
 
 export type VectorTileSourceOptions = VectorSourceSpecification & {

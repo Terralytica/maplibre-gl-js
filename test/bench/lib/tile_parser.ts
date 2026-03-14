@@ -1,7 +1,7 @@
 import Protobuf from 'pbf';
 import {VectorTile} from '@mapbox/vector-tile';
 
-import {derefLayers} from '@maplibre/maplibre-gl-style-spec'
+import {derefLayers} from '@terralytica/maplibre-gl-style-spec'
 import {Style} from '../../../src/style/style';
 import {IReadonlyTransform} from '../../../src/geo/transform_interface';
 import {Evented} from '../../../src/util/evented';
@@ -9,7 +9,7 @@ import {RequestManager} from '../../../src/util/request_manager';
 import {WorkerTile} from '../../../src/source/worker_tile';
 import {StyleLayerIndex} from '../../../src/style/style_layer_index';
 
-import type {StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {StyleSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {WorkerTileResult} from '../../../src/source/worker_source';
 import type {OverscaledTileID} from '../../../src/tile/tile_id';
 import type {TileJSON} from '../../../src/util/util';

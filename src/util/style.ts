@@ -1,4 +1,4 @@
-import type {SpriteSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {SpriteSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 /**
  * Takes a SpriteSpecification value and returns it in its array form. If `undefined` is passed as an input value, an

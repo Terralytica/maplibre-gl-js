@@ -4,7 +4,7 @@ import properties, {type HillshadePaintPropsPossiblyEvaluated} from './hillshade
 import {type Transitionable, type Transitioning, type PossiblyEvaluated} from '../properties';
 
 import type {HillshadePaintProps} from './hillshade_style_layer_properties.g';
-import type {Color, LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import type {Color, LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import {degreesToRadians} from '../../util/util';
 import type {EvaluationParameters} from '../evaluation_parameters';
 

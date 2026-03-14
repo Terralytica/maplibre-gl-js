@@ -11,7 +11,7 @@ import {
     UniformColorArray,
     UniformMatrix4f
 } from './uniform_binding';
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@terralytica/maplibre-gl-style-spec';
 
 describe('Uniform Binding', () => {
     test('Uniform1i', () => {

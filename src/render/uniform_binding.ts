@@ -1,4 +1,4 @@
-import {Color} from '@maplibre/maplibre-gl-style-spec';
+import {Color} from '@terralytica/maplibre-gl-style-spec';
 
 import type {Context} from '../gl/context';
 import {type mat4, type vec2, type vec3, type vec4} from 'gl-matrix';

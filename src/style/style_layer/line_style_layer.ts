@@ -7,8 +7,8 @@ import {extend} from '../../util/util';
 import {EvaluationParameters} from '../evaluation_parameters';
 import {type Transitionable, type Transitioning, type Layout, type PossiblyEvaluated, DataDrivenProperty} from '../properties';
 
-import {isZoomExpression, Step} from '@maplibre/maplibre-gl-style-spec';
-import type {LayerSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {isZoomExpression, Step} from '@terralytica/maplibre-gl-style-spec';
+import type {LayerSpecification} from '@terralytica/maplibre-gl-style-spec';
 import type {Bucket, BucketParameters} from '../../data/bucket';
 import type {LineLayoutProps, LinePaintProps} from './line_style_layer_properties.g';
 

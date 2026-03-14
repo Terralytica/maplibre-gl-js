@@ -7,7 +7,7 @@ import {type MapLayerEventType, type MapLibreEvent} from '../events';
 import {Map, type MapOptions} from '../map';
 import {Event as EventedEvent, ErrorEvent} from '../../util/evented';
 import {GlobeProjection} from '../../geo/projection/globe_projection';
-import {type StyleSpecification} from '@maplibre/maplibre-gl-style-spec';
+import {type StyleSpecification} from '@terralytica/maplibre-gl-style-spec';
 
 type IsAny<T> = 0 extends T & 1 ? T : never;
 type NotAny<T> = T extends IsAny<T> ? never : T;
